@@ -25,7 +25,8 @@ SECRET_KEY = 'vpw-72255g7i+9f&0qjmc8r1cnxmona*)z$+&#36d47ml8z)xs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '192.168.44.122', '42.111.145.131', 'localhost', '127.0.0.1', 'mercommunity.azurewebsites.net']
+# ALLOWED_HOSTS = ['0.0.0.0', '192.168.44.122', '42.111.145.131', 'localhost', '127.0.0.1', 'mercommunity.azurewebsites.net']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
