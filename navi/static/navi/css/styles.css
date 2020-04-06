@@ -1,0 +1,18 @@
+/* CSS Document */
+
+.loginbody {
+  background: url('https://uxbridgephysiotherapy.co.uk/wp-content/uploads/2018/02/ultra-2.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+
+.adminbody {
+  background: url('https://g.foolcdn.com/editorial/images/474380/fiber-optic-wires.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
