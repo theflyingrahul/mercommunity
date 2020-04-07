@@ -10,6 +10,9 @@ def privilege(request):
     return render(request, "navi/admin.html")
 
 def merlan(request):
-    file = file1.objects.all()
-    print(str(file))
-    return render(request, "navi/merlan.html", {'files': file})
+    if request.method == 'POST':
+        uploaded_file = request.FILES['uploaded_file']
+        print(uploaded_file.name)
+        print(uploaded_file.size)
+    file_query = file1.objects.all()
+    return render(request, "navi/merlan.html", {'files': file_query})
