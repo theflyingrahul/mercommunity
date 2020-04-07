@@ -22,5 +22,5 @@ def merlan(request):
         ext = os.path.splitext(uploaded_file.name)[1].upper().lstrip('.')
         file_object = file1(name=uploaded_file.name[0:48], fmt=ext, uploaded_by="rah", file_size=int(uploaded_file.size/1024/1024), date_time=datetime.datetime.now(), url=stored_name)
         file_object.save()
-    file_query = file1.objects.all()
+    file_query = file1.objects.all().order_by('-date_time__hour', '-date_time__minute')
     return render(request, "navi/merlan.html", {'files': file_query})
