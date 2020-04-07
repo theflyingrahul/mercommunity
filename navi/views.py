@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from django.core.files.storage import FileSystemStorage
 from navi.models import File as file1
+
 
 # Create your views here.
 
@@ -12,7 +14,7 @@ def privilege(request):
 def merlan(request):
     if request.method == 'POST':
         uploaded_file = request.FILES['uploaded_file']
-        print(uploaded_file.name)
-        print(uploaded_file.size)
+        fs = FileSystemStorage()
+        fs.save(uploaded_file.name, uploaded_file)
     file_query = file1.objects.all()
     return render(request, "navi/merlan.html", {'files': file_query})
