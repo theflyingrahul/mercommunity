@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^$', index, name='index'),
     path('privilege/', privilege),
     path('merlan/', merlan),
+    # path('media/', name='media')
 ]
 
 if settings.DEBUG:

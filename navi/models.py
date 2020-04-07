@@ -26,4 +26,4 @@ class File(models.Model):
     url = models.CharField(max_length=500)
 
     def __str__(self):
-        return self.name+" "+str(self.file_size)
+        return self.name+" "+str(self.file_size)+" MB"
