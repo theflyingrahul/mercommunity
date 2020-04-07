@@ -155,6 +155,7 @@
                       </tr>
                     </thead>
                     <tbody>
+                       {% for i in x %}
                       <tr>
                         <td>
                         200.0 (2020)
@@ -168,9 +169,10 @@
                           Mon 7:15 PM
                         </td>
                         <td class="text-center">
-                          icon
+                          <a><i class="tim-icons icon-cloud-download-93"></i></a>
                         </td>
                       </tr>
+                    {% endfor %}
                     </tbody>
                   </table>
                 </div>

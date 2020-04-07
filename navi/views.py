@@ -9,4 +9,4 @@ def privilege(request):
     return render(request, "navi/admin.html")
 
 def merlan(request):
-    return render(request, "navi/merlan.html")
+    return render(request, "navi/merlan.html", {'x': range(0,10)})
