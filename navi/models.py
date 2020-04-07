@@ -1,5 +1,5 @@
 from django.db import models
-
+import datetime
 # Create your models here.
 
 class UserGroup(models.Model):
@@ -16,3 +16,13 @@ class User(models.Model):
 
     def __str__(self):
         return self.username+" : "+self.password +" in "+str(self.group)
+
+class File(models.Model):
+    name = models.CharField(max_length=50)
+    file_size = models.IntegerField()
+    uploaded_by = models.CharField(max_length=30)
+    date_time = models.DateTimeField(default=datetime.datetime.now)
+    url = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.name+" "+str(self.file_size)

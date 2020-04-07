@@ -131,7 +131,8 @@
           <div class="col">
             <div class="card overflow-auto">
               <div class="card-header">
-                <h4 class="card-title"> Files on LAN File Server</h4>
+                <h4 class="card-title"> Files on LAN Server</h4>
+                <button type="submit" class="btn btn-fill btn-primary">Upload</button>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -155,21 +156,22 @@
                       </tr>
                     </thead>
                     <tbody>
-                       {% for i in x %}
+                       {% for f in files %}
                       <tr>
                         <td>
-                        200.0 (2020)
-						 [Proper Tamil - 720p HD AVC - UNTOUCHED - ESubs]</td>
+                          {{f.name}}
+                        </td>
                         <td>
-                        10920 MB&nbsp; </td>
+                          {{f.file_size}} MB&nbsp;
+                        </td>
                         <td>
-                          clement_007
+                          {{f.uploaded_by}}
                         </td>
 						<td>
-                          Mon 7:15 PM
+                          {{f.date_time}}
                         </td>
                         <td class="text-center">
-                          <a><i class="tim-icons icon-cloud-download-93"></i></a>
+                          <a href="{{f.url}}"><i class="tim-icons icon-cloud-download-93"></i></a>
                         </td>
                       </tr>
                     {% endfor %}

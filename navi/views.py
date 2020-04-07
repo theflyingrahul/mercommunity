@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from navi.models import File as file1
 
 # Create your views here.
 
@@ -9,4 +10,6 @@ def privilege(request):
     return render(request, "navi/admin.html")
 
 def merlan(request):
-    return render(request, "navi/merlan.html", {'x': range(0,10)})
+    file = file1.objects.all()
+    print(str(file))
+    return render(request, "navi/merlan.html", {'files': file})
