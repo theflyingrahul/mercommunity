@@ -19,6 +19,7 @@ class User(models.Model):
 
 class File(models.Model):
     name = models.CharField(max_length=50)
+    fmt = models.CharField(max_length=10)
     file_size = models.IntegerField()
     uploaded_by = models.CharField(max_length=30)
     date_time = models.DateTimeField(default=datetime.datetime.now)
