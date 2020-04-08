@@ -3,29 +3,30 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'navi/assets/img/apple-icon.png' %}">
-  <link rel="icon" type="image/png" href="{% static 'navi/assets/img/favicon.png' %}">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <link href="{% static 'navi/assets/img/apple-icon.png' %}" rel="apple-touch-icon" sizes="76x76">
+  <link href="{% static 'navi/assets/img/favicon.png' %}" rel="icon" type="image/png">
   <title>
     mer:LAN
   </title>
-  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet"/>
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-  <link href="{% static 'navi/assets/css/nucleo-icons.css' %}" rel="stylesheet" />
-  <link href="{% static 'navi/assets/css/black-dashboard.css' %}" rel="stylesheet" />
-<link href="{% static 'navi/assets/demo/demo.css' %}" rel="stylesheet" />
+  <link href="{% static 'navi/assets/css/nucleo-icons.css' %}" rel="stylesheet"/>
+  <link href="{% static 'navi/assets/css/black-dashboard.css' %}" rel="stylesheet"/>
+  <link href="{% static 'navi/assets/demo/demo.css' %}" rel="stylesheet"/>
 </head>
 
 <body class="">
-  <div class="wrapper">
+<div class="wrapper">
     <div class="sidebar">
       <div class="sidebar-wrapper">
         <div class="logo">
-          <a href="javascript:void(0)" class="simple-text logo-mini">
-          @ </a>
-          <a href="javascript:void(0)" class="simple-text logo-normal align">
-              /sdb/disk1s2
+          <a class="simple-text logo-mini" href="javascript:void(0)">
+            @ </a>
+          <a class="simple-text logo-normal align" href="javascript:void(0)">
+            /sdb/disk1s2
           </a>
         </div>
         <ul class="nav">
@@ -67,19 +68,25 @@
         <div class="container-fluid">
           <div class="navbar-wrapper">
             <div class="navbar-toggle d-inline">
-              <button type="button" class="navbar-toggler">
+              <button class="navbar-toggler" type="button">
                 <span class="navbar-toggler-bar bar1"></span>
                 <span class="navbar-toggler-bar bar2"></span>
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-              <a class="navbar-brand" href="javascript:void(0)"><p style="display:inline; text-transform: lowercase;" class="text-primary">mer: </p>Local Area Network<br>
-                <p style="display:inline; text-transform: none; font-size: 0.7rem; font-style: italic">powered by django
-                <p style="display:inline; text-transform: none; font-size: 0.8rem; font-style: italic;" class="text-primary">FileSystemStorage</p>
-                </p>
-              </a>
+            <a class="navbar-brand" href="javascript:void(0)"><p
+                    class="text-primary" style="display:inline; text-transform: lowercase;">mer: </p>Local Area
+              Network<br>
+              <p style="display:inline; text-transform: none; font-size: 0.7rem; font-style: italic">powered
+                by django
+              <p class="text-primary"
+                 style="display:inline; text-transform: none; font-size: 0.8rem; font-style: italic;">
+                FileSystemStorage</p>
+              </p>
+            </a>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navigation"
+                  data-toggle="collapse" type="button">
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -90,13 +97,14 @@
               <li class="dropdown nav-item">
 
                 <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
-                  <li class="nav-link"><a href="#" class="nav-item dropdown-item">No Notifications</a></li>
+                  <li class="nav-link"><a class="nav-item dropdown-item" href="#">No Notifications</a>
+                  </li>
                 </ul>
               </li>
               <li class="dropdown nav-item">
-                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">
                   <div class="photo">
-                    <img src="{% static 'navi/assets/img/anime3.png' %}" alt="Profile Photo">
+                    <img alt="Profile Photo" src="{% static 'navi/assets/img/anime3.png' %}">
                   </div>
                   <b class="caret d-none d-lg-block d-xl-block"></b>
                   <p class="d-lg-none">
@@ -104,10 +112,13 @@
                   </p>
                 </a>
                 <ul class="dropdown-menu dropdown-navbar">
-                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Profile</a></li>
-                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Settings</a></li>
+                  <li class="nav-link"><a class="nav-item dropdown-item"
+                                          href="javascript:void(0)">Profile</a></li>
+                  <li class="nav-link"><a class="nav-item dropdown-item" href="javascript:void(0)">Settings</a>
+                  </li>
                   <li class="dropdown-divider"></li>
-                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Log out</a></li>
+                  <li class="nav-link"><a class="nav-item dropdown-item" href="javascript:void(0)">Log
+                    out</a></li>
                 </ul>
               </li>
               <li class="separator d-lg-none"></li>
@@ -115,12 +126,14 @@
           </div>
         </div>
       </nav>
-      <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+      <div aria-hidden="true" aria-labelledby="searchModal" class="modal modal-search fade" id="searchModal"
+           role="dialog"
+           tabindex="-1">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <input class="form-control" id="inlineFormInputGroup" placeholder="SEARCH" type="text">
+              <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                 <i class="tim-icons icon-simple-remove"></i>
               </button>
             </div>
@@ -129,70 +142,78 @@
       </div>
       <div class="content">
         <div class="row">
-          <div class="col-12"> </div>
+          <div class="col-12"></div>
         </div>
-		<div class="row">
+        <div class="row">
           <div class="col">
             <div class="card overflow-auto">
               <div class="card-header">
                 <h4 class="card-title"> Files on LAN Server</h4>
-                <form method="POST" enctype="multipart/form-data">
+                <form enctype="multipart/form-data" method="POST">
                   {% csrf_token %}
-					<input type="file" id="uploaded_file" name="uploaded_file" style="display:none;"  onchange="javascript:this.form.submit()"/>
-					<button id="button" name="button" class="btn btn-fill btn-primary" onclick="thisFileUpload(); return false;">Upload</button>
-                    <script>
+                  <input id="uploaded_file" name="uploaded_file" onchange="javascript:this.form.submit()"
+                         style="display:none;"
+                         type="file"/>
+                  <button class="btn btn-fill btn-primary" id="button" name="button"
+                          onclick="thisFileUpload(); return false;">Upload
+                  </button>
+                  <script>
                         function thisFileUpload() {
 							document.getElementById("uploaded_file").click();
 						};
-					</script>
-				</form>
+
+
+
+                  </script>
+                </form>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table tablesorter " id="">
                     <thead class=" text-primary">
-                      <tr>
-                        <th>
-                          Name
-                        </th>
-                        <th>
-                          Format
-                        </th>
-                        <th>
-                        File Size</th>
-                        <th>
-                          Uploaded By
-                        </th>
-                        <th>
-                          Time of upload
-                        </th>
-						  <th class="text-center">
-                          Download
-                        </th>
-                      </tr>
+                    <tr>
+                      <th>
+                        Name
+                      </th>
+                      <th>
+                        Format
+                      </th>
+                      <th>
+                        File Size
+                      </th>
+                      <th>
+                        Uploaded By
+                      </th>
+                      <th>
+                        Time of upload
+                      </th>
+                      <th class="text-center">
+                        Download
+                      </th>
+                    </tr>
                     </thead>
                     <tbody>
-                       {% for f in files %}
-                      <tr>
-                        <td>
-                          {{f.name}}
-                        </td>
-                         <td>
-                          {{f.fmt}}
-                        </td>
-                        <td>
-                          {{f.file_size}} MB&nbsp;
-                        </td>
-                        <td>
-                          {{f.uploaded_by}}
-                        </td>
-						<td>
-                          {{f.date_time}}
-                        </td>
-                        <td class="text-center">
-                          <a href="/media/{{f.url}}"><i class="tim-icons icon-cloud-download-93"></i></a>
-                        </td>
-                      </tr>
+                    {% for f in files %}
+                    <tr>
+                      <td>
+                        {{f.name}}
+                      </td>
+                      <td>
+                        {{f.fmt}}
+                      </td>
+                      <td>
+                        {{f.file_size}} MB&nbsp;
+                      </td>
+                      <td>
+                        {{f.uploaded_by}}
+                      </td>
+                      <td>
+                        {{f.date_time}}
+                      </td>
+                      <td class="text-center">
+                        <a href="/media/{{f.url}}"><i class="tim-icons icon-cloud-download-93"></i></a>
+                      </td>
+                    </tr>
                     {% endfor %}
                     </tbody>
                   </table>
@@ -210,16 +231,16 @@
         </div>
       </footer>
     </div>
-  </div>
-  <div class="fixed-plugin">
+</div>
+<div class="fixed-plugin">
     <div class="dropdown show-dropdown">
-      <a href="#" data-toggle="dropdown">
+      <a data-toggle="dropdown" href="#">
         <i class="fa fa-cog fa-2x"> </i>
       </a>
       <ul class="dropdown-menu">
         <li class="header-title"> Sidebar Background</li>
         <li class="adjustments-line">
-          <a href="javascript:void(0)" class="switch-trigger background-color">
+          <a class="switch-trigger background-color" href="javascript:void(0)">
             <div class="badge-colors text-center">
               <span class="badge filter badge-primary active" data-color="primary"></span>
               <span class="badge filter badge-info" data-color="blue"></span>
@@ -236,15 +257,15 @@
         </li>
       </ul>
     </div>
-  </div>
-  <script src="{% static 'navi/assets/js/core/jquery.min.js' %}"></script>
-  <script src="{% static 'navi/assets/js/core/popper.min.js' %}"></script>
-  <script src="{% static 'navi/assets/js/core/bootstrap.min.js' %}"></script>
-  <script src="{% static 'navi/assets/js/plugins/perfect-scrollbar.jquery.min.js' %}"></script>
-  <script src="{% static 'navi/assets/js/plugins/bootstrap-notify.js' %}"></script>
-  <script src="{% static 'navi/assets/js/black-dashboard.min.js' %}"></script>
-  <script src="{% static 'navi/assets/demo/demo.js' %}"></script>
-  <script>
+</div>
+<script src="{% static 'navi/assets/js/core/jquery.min.js' %}"></script>
+<script src="{% static 'navi/assets/js/core/popper.min.js' %}"></script>
+<script src="{% static 'navi/assets/js/core/bootstrap.min.js' %}"></script>
+<script src="{% static 'navi/assets/js/plugins/perfect-scrollbar.jquery.min.js' %}"></script>
+<script src="{% static 'navi/assets/js/plugins/bootstrap-notify.js' %}"></script>
+<script src="{% static 'navi/assets/js/black-dashboard.min.js' %}"></script>
+<script src="{% static 'navi/assets/demo/demo.js' %}"></script>
+<script>
     $(document).ready(function() {
       $().ready(function() {
         $sidebar = $('.sidebar');
@@ -354,7 +375,10 @@
         });
       });
     });
-  </script>
+
+
+
+</script>
 </body>
 
 </html>

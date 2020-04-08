@@ -3,57 +3,57 @@
 
 <html>
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sign into Mer</title>
-<link href="{% static 'navi/css/bootstrap-4.3.1.css' %}" rel="stylesheet" type="text/css">
-<link href="{% static 'navi/css/styles.css' %}" rel="stylesheet" type="text/css">
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Sign into Mer</title>
+	<link href="{% static 'navi/css/bootstrap-4.3.1.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'navi/css/styles.css' %}" rel="stylesheet" type="text/css">
 </head>
 
 <body class="adminbody">
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	
-<!--	Firebase JS Implementation-->
-	<script defer src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
-	<script defer src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
-	<script defer src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
-	<script defer src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
-	<script defer src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
-	<script defer src="https://www.gstatic.com/firebasejs/7.13.2/firebase-functions.js"></script>
-	<script defer src="https://www.gstatic.com/firebasejs/7.13.2/firebase-messaging.js"></script>
-	<script defer src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
-	<script defer src="./scripts/init-firebase.js"></script>
+<script crossorigin="anonymous"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script crossorigin="anonymous"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-	<div class="container" style="position: absolute;
+<div class="container" style="position: absolute;
 		top: 50%;
 		left: 50%;
 		-moz-transform: translateX(-50%) translateY(-50%);
 		-webkit-transform: translateX(-50%) translateY(-50%);
 		transform: translateX(-50%) translateY(-50%);">
 
-		<div class="card text-black bg-white mb-3" style="max-width: 25rem;">
-		  <div class="card-header">Privileged Access Only</div>
-		  <div class="card-body">
+	<div class="card text-black bg-white mb-3" style="max-width: 25rem;">
+		<div class="card-header">Privileged Access Only</div>
+		<div class="card-body">
 			<h2 class="card-title">mer<sup><sup style="font-size: 0.8rem;">(community)</sup></sup></h2>
 			<h5 class="card-title">Level 2: Sign in</h5>
-			<p class="card-text"><div class="input-group input-group-sm mb-3">
-				  <input type="text" class="form-control" placeholder="username" aria-label="username" id="email" aria-describedby="basic-addon2">
-				  <div class="input-group-append">
+			<p class="card-text">
+			<div class="input-group input-group-sm mb-3">
+				<input aria-describedby="basic-addon2" aria-label="username" class="form-control" id="email"
+					   placeholder="username"
+					   type="text">
+				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">@mercommunity.com</span>
-				  </div>
-				</div>
-				<div class="input-group input-group-sm mb-3">
-				  <input type="password" id="password" class="form-control" placeholder="password" aria-label="password" aria-describedby="basic-addon2">
-				</div>
-				</p>
-				<div class="text-right">
-				  <button type="button" class="btn btn-primary btn-sm" onClick="handleSignUp()">Continue</button>
 				</div>
 			</div>
-	  </div>
+			<div class="input-group input-group-sm mb-3">
+				<input aria-describedby="basic-addon2" aria-label="password" class="form-control" id="password"
+					   placeholder="password"
+					   type="password">
+			</div>
+			</p>
+			<div class="text-right">
+				<button class="btn btn-primary btn-sm" onClick="handleSignUp()" type="button">Continue</button>
+			</div>
+		</div>
 	</div>
+</div>
 </body>
 </html>
