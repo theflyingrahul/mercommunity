@@ -7,6 +7,8 @@
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <link href="{% static 'navi/assets/img/apple-icon.png' %}" rel="apple-touch-icon" sizes="76x76">
     <link href="{% static 'navi/assets/img/favicon.png' %}" rel="icon" type="image/png">
+    <link href="{% static 'navi/css/styles.css' %}" rel="stylesheet" type="text/css">
+
     <title>
         mer:LAN
     </title>
@@ -19,6 +21,85 @@
 </head>
 
 <body class="">
+
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade ngdialog-overlay" id="exampleModal"
+     role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Upload Content</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label class="mb-0" for="title" style="color: black">Topic</label>
+                    <input class="form-control mb-2" id="title" placeholder="Enter title"
+                           style="" style="color: black" type="text">
+
+                    <div class="row">
+                        <div class="col">
+                            <label class="mb-0" for="dept" style="color: black">Department</label>
+                            <select class="form-control mb-2" id="dept" style="color: black">
+                                <option selected>Information Technology</option>
+                                <option>Computer Science and Engineering</option>
+                                <option>Electrical and Electronic Engineering</option>
+                                <option>Electronics and Communication Engineering</option>
+                                <option>Mechanical Engineering</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label class="mb-0" for="year" style="color: black">Year</label>
+                            <select class="form-control mb-2" id="year" style="color: black">
+                                <option selected>IV</option>
+                                <option>III</option>
+                                <option>II</option>
+                                <option>I</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+
+                    <label class="mb-0" for="subject" style="color: black">Subject</label>
+                    <select class="form-control mb-2" id="subject" style="color: black">
+                        <option selected>Computational Intelligence</option>
+                        <option>...</option>
+                    </select>
+                    <p>Selected files:</p>
+                    <input id="file" multiple
+                           name="file"
+                           onchange="javascript:updateList()"
+                           type="file"/>
+
+                    <div id="fileList"></div>
+                    <script>
+                                updateList = function() {
+                                var input = document.getElementById('file');
+                                var output = document.getElementById('fileList');
+                                var children = "";
+                                for (var i = 0; i < input.files.length; ++i) {
+                                    children += '<li style="color: black">' + input.files.item(i).name + '</li>';
+                                }
+                                output.innerHTML = '<ul>'+children+'</ul>';
+                            }
+
+
+                    </script>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel
+                </button>
+                <button class="btn btn-primary" type="button">Upload</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="wrapper">
     <div class="sidebar">
         <div class="sidebar-wrapper">
@@ -155,85 +236,6 @@
                                     name="button" type="button">
                                 Upload
                             </button>
-                        </div>
-                        <!-- Modal -->
-                        <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal"
-                             role="dialog" tabindex="-1">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Upload Content</h5>
-                                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-
-                                        <div class="card mb-1" style="background-color: white">
-                                            <div align="left" class="card-body">
-                                                <form>
-                                                    <label for="title" style="color: black">Topic</label>
-                                                    <input class="form-control" id="title" placeholder="Enter title"
-                                                           style="" style="color: black" type="text">
-
-                                                    <label for="dept" style="color: black">Department</label>
-                                                    <select class="form-control" id="dept" style="color: black">
-                                                        <option selected>Information Technology</option>
-                                                        <option>Computer Science and Engineering</option>
-                                                        <option>Electrical and Electronic Engineering</option>
-                                                        <option>Electronics and Communication Engineering</option>
-                                                        <option>Mechanical Engineering</option>
-                                                    </select>
-
-                                                    <label for="year" style="color: black">Year</label>
-                                                    <select class="form-control" id="year" style="color: black">
-                                                        <option selected>IV</option>
-                                                        <option>III</option>
-                                                        <option>II</option>
-                                                        <option>I</option>
-                                                    </select>
-
-                                                    <label for="subject" style="color: black">Year</label>
-                                                    <select class="form-control" id="subject" style="color: black">
-                                                        <option selected>Computational Intelligence</option>
-                                                        <option>...</option>
-                                                    </select>
-                                                    <p>Selected files:</p>
-                                                    <input id="file" multiple
-                                                           name="file"
-                                                           onchange="javascript:updateList()"
-                                                           type="file"/>
-
-                                                    <div id="fileList"></div>
-                                                    <script>
-                                                    updateList = function() {
-                                                    var input = document.getElementById('file');
-                                                    var output = document.getElementById('fileList');
-                                                    var children = "";
-                                                    for (var i = 0; i < input.files.length; ++i) {
-                                                        children += '<li style="color: black">' + input.files.item(i).name + '</li>';
-                                                    }
-                                                    output.innerHTML = '<ul>'+children+'</ul>';
-                                                }
-
-
-
-                                                    </script>
-                                                </form>
-
-
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button class="btn btn-secondary" data-dismiss="modal" type="button">Close
-                                        </button>
-                                        <button class="btn btn-primary" type="button">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
 
                     </div>
@@ -541,6 +543,11 @@
         });
       });
     });
+
+
+
+
+
 
 
 
