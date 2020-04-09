@@ -171,31 +171,59 @@
 
                                         <div class="card mb-1" style="background-color: white">
                                             <div align="left" class="card-body">
+                                                <form>
+                                                    <label for="title" style="color: black">Topic</label>
+                                                    <input class="form-control" id="title" placeholder="Enter title"
+                                                           style="" style="color: black" type="text">
 
-                                                <input id="file" multiple
-                                                       name="file"
-                                                       onchange="javascript:updateList()"
-                                                       type="file"/>
+                                                    <label for="dept" style="color: black">Department</label>
+                                                    <select class="form-control" id="dept" style="color: black">
+                                                        <option selected>Information Technology</option>
+                                                        <option>Computer Science and Engineering</option>
+                                                        <option>Electrical and Electronic Engineering</option>
+                                                        <option>Electronics and Communication Engineering</option>
+                                                        <option>Mechanical Engineering</option>
+                                                    </select>
 
-                                                <p>Selected files:</p>
+                                                    <label for="year" style="color: black">Year</label>
+                                                    <select class="form-control" id="year" style="color: black">
+                                                        <option selected>IV</option>
+                                                        <option>III</option>
+                                                        <option>II</option>
+                                                        <option>I</option>
+                                                    </select>
 
-                                                <div id="fileList"></div>
+                                                    <label for="subject" style="color: black">Year</label>
+                                                    <select class="form-control" id="subject" style="color: black">
+                                                        <option selected>Computational Intelligence</option>
+                                                        <option>...</option>
+                                                    </select>
+                                                    <p>Selected files:</p>
+                                                    <input id="file" multiple
+                                                           name="file"
+                                                           onchange="javascript:updateList()"
+                                                           type="file"/>
+
+                                                    <div id="fileList"></div>
+                                                    <script>
+                                                    updateList = function() {
+                                                    var input = document.getElementById('file');
+                                                    var output = document.getElementById('fileList');
+                                                    var children = "";
+                                                    for (var i = 0; i < input.files.length; ++i) {
+                                                        children += '<li style="color: black">' + input.files.item(i).name + '</li>';
+                                                    }
+                                                    output.innerHTML = '<ul>'+children+'</ul>';
+                                                }
+
+
+
+                                                    </script>
+                                                </form>
+
 
                                             </div>
                                         </div>
-
-                                        <script>
-                                            updateList = function() {
-                                            var input = document.getElementById('file');
-                                            var output = document.getElementById('fileList');
-                                            var children = "";
-                                            for (var i = 0; i < input.files.length; ++i) {
-                                                children += '<li>' + input.files.item(i).name + '</li>';
-                                            }
-                                            output.innerHTML = '<ul>'+children+'</ul>';
-                                        }
-
-                                        </script>
 
 
                                     </div>
@@ -513,6 +541,9 @@
         });
       });
     });
+
+
+
 
 
 
