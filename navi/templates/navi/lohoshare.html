@@ -148,9 +148,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="row">
-                        <div class="col"><h3 class="mt-2 mb-3"> Recently Viewed</h3></div>
-                        <div class="col">
-                            <button class="mb-2 btn btn-fill float-right btn-primary" data-target="#exampleModal"
+                        <div class="col my-auto"><h3 class="mb-3"> Recently Viewed</h3></div>
+                        <div class="col my-auto">
+                            <button class="mb-3 btn btn-fill float-right btn-primary" data-target="#exampleModal"
                                     data-toggle="modal" id="button"
                                     name="button" type="button">
                                 Upload
@@ -171,9 +171,31 @@
 
                                         <div class="card mb-1" style="background-color: white">
                                             <div align="left" class="card-body">
-                                                Hello World!
+
+                                                <input id="file" multiple
+                                                       name="file"
+                                                       onchange="javascript:updateList()"
+                                                       type="file"/>
+
+                                                <p>Selected files:</p>
+
+                                                <div id="fileList"></div>
+
                                             </div>
                                         </div>
+
+                                        <script>
+                                            updateList = function() {
+                                            var input = document.getElementById('file');
+                                            var output = document.getElementById('fileList');
+                                            var children = "";
+                                            for (var i = 0; i < input.files.length; ++i) {
+                                                children += '<li>' + input.files.item(i).name + '</li>';
+                                            }
+                                            output.innerHTML = '<ul>'+children+'</ul>';
+                                        }
+
+                                        </script>
 
 
                                     </div>
@@ -491,6 +513,12 @@
         });
       });
     });
+
+
+
+
+
+
 
 
 
